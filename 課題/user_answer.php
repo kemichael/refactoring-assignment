@@ -94,6 +94,7 @@ function example() {
 }
 
 // Q11
+// 関数の役割が多い
 function processOrder($order) {
     // 注文の検証
     // 顧客情報の取得
@@ -102,6 +103,27 @@ function processOrder($order) {
     // 注文の保存
     // メール送信
 }
+
+function getOrder($order) {
+    // 注文の検証
+}
+
+function getGuest($order) {
+    // 顧客情報の取得
+}
+
+function checkStock($order) {
+    // 在庫の確認
+    // 支払い処理
+    // 注文の保存
+    // メール送信
+}
+
+
+
+
+
+
 
 // Q12
 function calculateAreaOfRectangle($width, $height) {
