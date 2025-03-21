@@ -1,19 +1,22 @@
 <?php
-
-// Q1
-function calculate($a, $b, $c) {
-    $d = $a + $b;
-    $e = $d * $c;
-    return $e;
+// 回答用
+//問題名-１　自力で回答
+//問題名-２　答え合わせ中に記載（わからんかった）
+// Q1ー１
+function calculate($product_a, $product_b, $tax) {
+    $subtotal = $product_a + $product_b;
+    $total = $subtotal * $tax;
+    return $total;
 }
 
 
-// Q2
+// Q2ー１
+const tax = 0.08;
 function calculateTax($price) {
-    return $price * 0.08;
+    return $price * tax;
 }
 
-// Q3
+// Q3ー２
 function checkValid($value) {
     if ($value > 0) {
         return true;
@@ -22,24 +25,30 @@ function checkValid($value) {
     }
 }
 
-// Q4
+// Q4ー１
 $data = ['John', 30, 'Tokyo', 'Developer'];
+$name = 'john';
+$age = 30;
+$city = 'tokyo';
+$occupation = 'developer';
 
-// Q5
+// Q5-２
 $isNotValid = false;
 
-// Q6
+// Q6ー１
 $usrNm = 'John Doe';
+$user_name = 'john doe'
 
-// Q7
-$count = ['apple', 'banana', 'orange'];
 
-// Q8
-for ($i = 0; $i < 10; $i++) {
+// Q7ー１
+$fruits = ['apple', 'banana', 'orange'];
+
+// Q8ー１
+for ($count = 0; $count < 10; $count++) {
     // ...
 }
 
-// Q9
+// Q9ー２
 $globalValue = 10;
 
 function process() {
@@ -47,7 +56,7 @@ function process() {
     // ...
 }
 
-// Q10
+// Q10ー２
 function example() {
     $value = 10;
     if (true) {
@@ -56,15 +65,16 @@ function example() {
     echo $value;
 }
 
-// Q11
+// Q11ー１
 function processOrder($order) {
-    // 注文の検証
-    // 顧客情報の取得
-    // 在庫の確認
-    // 支払い処理
-    // 注文の保存
-    // メール送信
-}
+    validateOrder($order);// 注文の検証
+    $customer = getCustomer($order);// 顧客情報の取得
+    checkStock($order);// 在庫の確認
+    processPayment($order);// 支払い処理
+    saveOrder($order);// 注文の保存
+    sendEmail($order);// メール送信
+
+  }
 
 // Q12
 function calculateAreaOfRectangle($width, $height) {
@@ -80,16 +90,17 @@ function createUser($name, $age, $address, $email, $phone) {
     // ...
 }
 
-// Q14
-function processData($data, $isAscending) {
-    if ($isAscending) {
-        // 昇順処理
-    } else {
-        // 降順処理
-    }
+// Q14ー１
+function processAscendingData($data) {
+  // 昇順処理
 }
 
-// Q15
+function processDescendingData($data) {
+  // 降順処理
+}
+
+//ここで自習時間終了になった。
+// Q15ー２
 function formatData($data, $type) {
     if ($type === 'csv') {
         // CSV形式に変換
@@ -98,17 +109,17 @@ function formatData($data, $type) {
     }
 }
 
-// Q16
+// Q16ー２
 function calculateDiscountedPrice($price) {
     return $price * 0.9;
 }
 
-// Q17
+// Q17ー２
 function getUserData($userId) {
     // ユーザー情報を削除
 }
 
-// Q18
+// Q18ー２
 $count = 0;
 
 function incrementCount() {
@@ -116,7 +127,7 @@ function incrementCount() {
     $count++;
 }
 
-// Q19
+// Q19ー２
 function processData2($data) {
     // データを検証する
     if (empty($data)) {
@@ -125,7 +136,7 @@ function processData2($data) {
     // ...
 }
 
-// Q20
+// Q20ー２
 function process2($value) {
     if ($value > 0) {
         if ($value < 10) {
