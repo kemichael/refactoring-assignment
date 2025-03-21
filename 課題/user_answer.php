@@ -2,18 +2,33 @@
 
 // Q1
 function calculate($a, $b, $c) {
-    $d = $a + $b;
-    $e = $d * $c;
-    return $e;
+
+    // $d = $a + $b;
+    // $e = $d * $c;
+    // return $e;
+    // 直接計算結果を返すように変更
+    return ($a + $b) * $c ;
 }
+
+// for test
+// echo calculate(10,20,30);
+
 
 
 // Q2
 function calculateTax($price) {
-    return $price * 0.08;
+// 0.08が何を指すか追加    
+    $taxRate = 0.08; 
+    return $price * $taxRate;
 }
 
+// for test
+// echo calculateTax(100);
+
+
+
 // Q3
+// 分からない…
 function checkValid($value) {
     if ($value > 0) {
         return true;
@@ -23,16 +38,38 @@ function checkValid($value) {
 }
 
 // Q4
+// 分からない…
 $data = ['John', 30, 'Tokyo', 'Developer'];
 
 // Q5
+// 分からない…
 $isNotValid = false;
 
 // Q6
-$usrNm = 'John Doe';
+// 変数名を有意味に変更
+// $usrNm = 'John Doe';
+$userName = 'John Doe';
+// for test
+// echo $userName;
+
 
 // Q7
-$count = ['apple', 'banana', 'orange'];
+// $count = ['apple', 'banana', 'orange'];
+// // for test
+// for($i = 0; $i < count($count); $i++){
+//     echo $count[$i] . "\n";
+// }
+
+// $countという変数名が不適切
+
+$fruits = ['apple', 'banana', 'orange'];
+
+// for test
+// for($i = 0; $i < count($fruits); $i++){
+//     echo $fruits[$i] . "\n";
+// }
+
+
 
 // Q8
 for ($i = 0; $i < 10; $i++) {
