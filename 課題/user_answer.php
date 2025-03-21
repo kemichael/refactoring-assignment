@@ -2,37 +2,40 @@
 
 // Q1
 function calculate($a, $b, $c) {
-    $d = $a + $b;
-    $e = $d * $c;
-    return $e;
+    return ($a + $b) * $c;
 }
 
 
 // Q2
 function calculateTax($price) {
-    return $price * 0.08;
+    $Tax = 0.08;
+    return $price * $Tax;
 }
 
 // Q3
 function checkValid($value) {
-    if ($value > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return $value >= 0;
+    return $value <= 0;
 }
 
 // Q4
-$data = ['John', 30, 'Tokyo', 'Developer'];
+function UserInformation(){
+    return [
+        'name' => 'John',
+        'age' => 30,
+        'address' => 'Tokyo',
+        'post' => 'Developer',
+    ];
+}
 
 // Q5
-$isNotValid = false;
+$isValid = false;
 
 // Q6
-$usrNm = 'John Doe';
+$userName = 'John Doe';
 
 // Q7
-$count = ['apple', 'banana', 'orange'];
+$fruitsName = ['apple', 'banana', 'orange'];
 
 // Q8
 for ($i = 0; $i < 10; $i++) {
@@ -59,10 +62,15 @@ function example() {
 // Q11
 function processOrder($order) {
     // 注文の検証
+    orderValidation
     // 顧客情報の取得
+    getCustomerInfo(){}
     // 在庫の確認
+    stockStatus
     // 支払い処理
+    paymentProcess
     // 注文の保存
+    saveOrder
     // メール送信
 }
 
