@@ -17,12 +17,8 @@ function calculateTax($price) {
 }
 
 // Q3ー２
-function checkValid($value) {
-    if ($value > 0) {
-        return true;
-    } else {
-        return false;
-    }
+function isValid($value) {
+  return $value > 0;
 }
 
 // Q4ー１
@@ -33,7 +29,11 @@ $city = 'tokyo';
 $occupation = 'developer';
 
 // Q5-２
-$isNotValid = false;
+$isValid = true;
+
+if (!$isValid) {
+    // ...
+}
 
 // Q6ー１
 $usrNm = 'John Doe';
@@ -49,20 +49,25 @@ for ($count = 0; $count < 10; $count++) {
 }
 
 // Q9ー２
-$globalValue = 10;
+class MyClass {
+  private $globalValue = 10;
 
-function process() {
-    global $globalValue;
-    // ...
+  public function process() {
+      // $this->globalValue を使用
+  }
+}
+
+function process($globalValue) {
+  // $globalValue を使用
 }
 
 // Q10ー２
 function example() {
-    $value = 10;
-    if (true) {
-        // ...
-    }
-    echo $value;
+  if (true) {
+      $value = 10;
+      // ...
+      echo $value;
+  }
 }
 
 // Q11ー１
@@ -76,18 +81,18 @@ function processOrder($order) {
 
   }
 
-// Q12
-function calculateAreaOfRectangle($width, $height) {
-    return $width * $height;
+// Q12ー１
+function calculateArea($width, $height, $type) {
+  if ($type === 'rectangle') {
+      return $width * $height;
+  } elseif ($type === 'triangle') {
+      return $width * $height / 2;
+  }
 }
 
-function calculateAreaOfTriangle($base, $height) {
-    return $base * $height / 2;
-}
-
-// Q13
-function createUser($name, $age, $address, $email, $phone) {
-    // ...
+// Q13ー２
+function createUser($userData) {
+  // $userData オブジェクトまたは配列を使用
 }
 
 // Q14ー１
@@ -101,50 +106,51 @@ function processDescendingData($data) {
 
 //ここで自習時間終了になった。
 // Q15ー２
-function formatData($data, $type) {
-    if ($type === 'csv') {
-        // CSV形式に変換
-    } elseif ($type === 'json') {
-        // JSON形式に変換
-    }
+function formatCsvData($data) {
+  // CSV形式に変換
+}
+
+function formatJsonData($data) {
+  // JSON形式に変換
 }
 
 // Q16ー２
-function calculateDiscountedPrice($price) {
-    return $price * 0.9;
+function calculateDiscountedPrice($price, $discountRate) {
+  return $price * $discountRate;
 }
 
 // Q17ー２
-function getUserData($userId) {
-    // ユーザー情報を削除
+function deleteUser($userId) {
+  // ユーザー情報を削除
 }
 
 // Q18ー２
-$count = 0;
-
-function incrementCount() {
-    global $count;
-    $count++;
+function incrementCount($count) {
+  return $count + 1;
 }
 
 // Q19ー２
+function validateData($data) {
+  return !empty($data);
+}
+
 function processData2($data) {
-    // データを検証する
-    if (empty($data)) {
-        return false;
-    }
-    // ...
+  if (!validateData($data)) {
+      return false;
+  }
+  // ...
 }
 
 // Q20ー２
 function process2($value) {
-    if ($value > 0) {
-        if ($value < 10) {
-            // ...
-        } else {
-            // ...
-        }
-    } else {
-        // ...
-    }
+  if ($value <= 0) {
+      return;
+  }
+
+  if ($value < 10) {
+      // ...
+      return;
+  }
+
+  // ...
 }
