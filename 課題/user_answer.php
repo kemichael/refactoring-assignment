@@ -2,85 +2,105 @@
 
 // Q1
 function calculate($a, $b, $c) {
-    $d = $a + $b;
-    $e = $d * $c;
-    return $e;
+    return ($a + $b) * $c;
 }
 
-
 // Q2
-function calculateTax($price) {
-    return $price * 0.08;
+const TAX_RATE = 0.08;
+
+function getTax($price) {
+    return $price * TAX_RATE;
 }
 
 // Q3
 function checkValid($value) {
-    if ($value > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return $value > 0;
 }
 
 // Q4
-$data = ['John', 30, 'Tokyo', 'Developer'];
+$data = [
+    'name' => 'John',
+    'age' => 30,
+    'location' => 'Tokyo',
+    'occupation' => 'Developer'
+];
 
 // Q5
-$isNotValid = false;
+$isValid = true;
 
 // Q6
-$usrNm = 'John Doe';
+$userName = 'John Doe';
 
 // Q7
-$count = ['apple', 'banana', 'orange'];
+$fruits = ['apple', 'banana', 'orange'];
 
 // Q8
-for ($i = 0; $i < 10; $i++) {
+for ($index = 0; $index < 10; $index++) {
     // ...
 }
 
 // Q9
-$globalValue = 10;
-
-function process() {
-    global $globalValue;
-    // ...
+function process($value) {
+    return $value * 2;
 }
+
+$globalValue = 10;
+$result = process($globalValue);
 
 // Q10
 function example() {
     $value = 10;
     if (true) {
         // ...
+        echo $value;
     }
-    echo $value;
 }
 
 // Q11
 function processOrder($order) {
-    // 注文の検証
-    // 顧客情報の取得
-    // 在庫の確認
+    validateOrder($order);
+    getCustomerInfo($order);
+    checkInventory($order);
+    processPayment($order);
+    saveOrder($order);
+    sendConfirmationEmail($order);
+}
+
+function validateOrder($order) {
+    // 注文の検証処理
+}
+
+function getCustomerInfo($order) {
+    // 顧客情報の取得処理
+}
+
+function checkInventory($order) {
+    // 在庫の確認処理
+}
+
+function processPayment($order) {
     // 支払い処理
-    // 注文の保存
-    // メール送信
+}
+
+function saveOrder($order) {
+    // 注文の保存処理
+}
+
+function sendConfirmationEmail($order) {
+    // メール送信処理
 }
 
 // Q12
-function calculateAreaOfRectangle($width, $height) {
-    return $width * $height;
+function calculateArea($base, $height, $multiplier = 1) {
+    return $base * $height * $multiplier;
 }
 
-function calculateAreaOfTriangle($base, $height) {
-    return $base * $height / 2;
-}
-
-// Q13
+// Q13 未回答
 function createUser($name, $age, $address, $email, $phone) {
     // ...
 }
 
-// Q14
+// Q14　未回答
 function processData($data, $isAscending) {
     if ($isAscending) {
         // 昇順処理
@@ -89,7 +109,7 @@ function processData($data, $isAscending) {
     }
 }
 
-// Q15
+// Q15　未回答
 function formatData($data, $type) {
     if ($type === 'csv') {
         // CSV形式に変換
@@ -98,17 +118,17 @@ function formatData($data, $type) {
     }
 }
 
-// Q16
+// Q16　未回答
 function calculateDiscountedPrice($price) {
     return $price * 0.9;
 }
 
-// Q17
+// Q17　未回答
 function getUserData($userId) {
     // ユーザー情報を削除
 }
 
-// Q18
+// Q18　未回答
 $count = 0;
 
 function incrementCount() {
@@ -116,7 +136,7 @@ function incrementCount() {
     $count++;
 }
 
-// Q19
+// Q19　未回答
 function processData2($data) {
     // データを検証する
     if (empty($data)) {
@@ -125,7 +145,7 @@ function processData2($data) {
     // ...
 }
 
-// Q20
+// Q20　未回答
 function process2($value) {
     if ($value > 0) {
         if ($value < 10) {
