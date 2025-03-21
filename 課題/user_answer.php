@@ -1,41 +1,44 @@
 <?php
 
 // Q1
-function calculate($a, $b, $c) {
-    $d = $a + $b;
-    $e = $d * $c;
-    return $e;
+function calculate($augend, $addend, $multiplicand) {
+    $sum = $augend + $addend;
+    $result = $sum * $multiplicand;
+    return $result;
 }
 
 
 // Q2
+// 税率を定数化
+const TAX = 0.08;
 function calculateTax($price) {
-    return $price * 0.08;
+    return $price * TAX;
 }
 
 // Q3
 function checkValid($value) {
-    if ($value > 0) {
-        return true;
-    } else {
-        return false;
-    }
+    return true ? $value > 0 : false;
 }
 
 // Q4
-$data = ['John', 30, 'Tokyo', 'Developer'];
+$data = [
+    "name" => 'John',
+    "age" => 30,
+    "prefectures" => "Tokyo",
+    "position" => "Developer",
+];
 
 // Q5
-$isNotValid = false;
+$isValid = false;
 
 // Q6
-$usrNm = 'John Doe';
+$userName = 'John Doe';
 
 // Q7
-$count = ['apple', 'banana', 'orange'];
+$fruits = ['apple', 'banana', 'orange'];
 
 // Q8
-for ($i = 0; $i < 10; $i++) {
+for ($index = 0; $index < 10; $index++) {
     // ...
 }
 
@@ -58,12 +61,12 @@ function example() {
 
 // Q11
 function processOrder($order) {
-    // 注文の検証
-    // 顧客情報の取得
-    // 在庫の確認
-    // 支払い処理
-    // 注文の保存
-    // メール送信
+    // 注文の検証メソッドの呼び出し
+    // 顧客情報の取得メソッドの呼び出し
+    // 在庫の確認メソッドの呼び出し
+    // 支払い処理メソッドの呼び出し
+    // 注文の保存メソッドの呼び出し
+    // メール送信メソッドの呼び出し
 }
 
 // Q12
@@ -76,12 +79,19 @@ function calculateAreaOfTriangle($base, $height) {
 }
 
 // Q13
-function createUser($name, $age, $address, $email, $phone) {
+$userInfo = [
+    "name" => "名前",
+    "age" => "年齢",
+    "address" => "住所",
+    "email" => "メールアドレス",
+    "phone" => "電話番号",
+];
+function createUser($userInfo) {
     // ...
 }
 
 // Q14
-function processData($data, $isAscending) {
+function processData($data, bool $isAscending) {
     if ($isAscending) {
         // 昇順処理
     } else {
@@ -90,21 +100,26 @@ function processData($data, $isAscending) {
 }
 
 // Q15
-function formatData($data, $type) {
-    if ($type === 'csv') {
-        // CSV形式に変換
-    } elseif ($type === 'json') {
-        // JSON形式に変換
-    }
+
+// CSV形式に変換する場合はformatDataAsCsvメソッドを呼び出し
+function formatDataAsCsv($data) {
+    // CSV形式に変換
+}
+
+// JSON形式に変換する場合はformatDataAsJsonメソッドを呼び出し
+function formatDataAsJson($data) {
+    // JSON形式に変換
 }
 
 // Q16
 function calculateDiscountedPrice($price) {
-    return $price * 0.9;
+    // 割引率を定数化
+    define("DISCOUNT", 0.9);
+    return $price * DISCOUNT;
 }
 
 // Q17
-function getUserData($userId) {
+function deleteUserData($userId) {
     // ユーザー情報を削除
 }
 
@@ -126,13 +141,12 @@ function processData2($data) {
 }
 
 // Q20
+// 0より大きくて10より小さい、10以上、0以下
 function process2($value) {
-    if ($value > 0) {
-        if ($value < 10) {
-            // ...
-        } else {
-            // ...
-        }
+    if ($value <= 0) {
+        // ...
+    } elseif ($value < 10) {
+        // ...
     } else {
         // ...
     }
